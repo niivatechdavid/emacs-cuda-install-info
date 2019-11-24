@@ -1,0 +1,11 @@
+To install and use emacs for .cu
+
+sudo apt install emacs
+
+need to put in home directory: cuda-mode.el 
+from http://www.emacswiki.org/emacs/CudaMode in home directory
+
+add following lines to .emacs in home directory:
+(add-to-list 'load-path "~/")
+(autoload 'cuda-mode "cuda-mode.el")
+(add-to-list 'auto-mode-alist '("\\.cu\\'" . cuda-mode))
